@@ -97,4 +97,3 @@ _xcodebuild "wavpack/wavpack.xcodeproj" \
 
 _xcodebuild "zlib/zlib.xcodeproj" \
             "z" \
-            "zlib"
