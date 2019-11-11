@@ -311,7 +311,7 @@
 		32437F9C10CE4D5E005A8B46 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
 		326D048D0DD02848001D08E9 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		32D86509105306D4002E8E1A /* FLAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FLAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		32D8650A105306D4002E8E1A /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
+		32D8650A105306D4002E8E1A /* flac */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = flac; sourceTree = "<group>"; };
 		32D8659E10530AF0002E8E1A /* all.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = all.h; path = "flac-src/include/FLAC/all.h"; sourceTree = "<group>"; };
 		32D8659F10530AF0002E8E1A /* assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = assert.h; path = "flac-src/include/FLAC/assert.h"; sourceTree = "<group>"; };
 		32D865A010530AF0002E8E1A /* callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = callback.h; path = "flac-src/include/FLAC/callback.h"; sourceTree = "<group>"; };
@@ -426,7 +426,7 @@
 				C6A0FF2B0290797F04C91782 /* Documentation */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 				326D048D0DD02848001D08E9 /* libiconv.dylib */,
-				32D8650A105306D4002E8E1A /* Framework-Info.plist */,
+				32D8650A105306D4002E8E1A /* flac */,
 			);
 			name = flac;
 			sourceTree = "<group>";
@@ -875,9 +875,9 @@
 			productReference = 322C9BB01125AAB600FD72D8 /* libiPhone lib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		32D86508105306D4002E8E1A /* Framework */ = {
+		32D86508105306D4002E8E1A /* flac.framework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32D8650D105306D4002E8E1A /* Build configuration list for PBXNativeTarget "Framework" */;
+			buildConfigurationList = 32D8650D105306D4002E8E1A /* Build configuration list for PBXNativeTarget "flac.framework" */;
 			buildPhases = (
 				32D86504105306D4002E8E1A /* Headers */,
 				32D86505105306D4002E8E1A /* Resources */,
@@ -888,14 +888,14 @@
 			);
 			dependencies = (
 			);
-			name = Framework;
+			name = flac.framework;
 			productName = framework;
 			productReference = 32D86509105306D4002E8E1A /* FLAC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D2AAC045055464E500DB518D /* libFLAC */ = {
+		D2AAC045055464E500DB518D /* libflac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libFLAC" */;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libflac" */;
 			buildPhases = (
 				D2AAC043055464E500DB518D /* Headers */,
 				D2AAC044055464E500DB518D /* Sources */,
@@ -905,7 +905,7 @@
 			);
 			dependencies = (
 			);
-			name = libFLAC;
+			name = libflac;
 			productName = flac;
 			productReference = D2AAC046055464E500DB518D /* libFLAC.a */;
 			productType = "com.apple.product-type.library.static";
@@ -934,7 +934,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC045055464E500DB518D /* libFLAC */,
+				D2AAC045055464E500DB518D /* libflac */,
 				320A7B610DCFA0F300FBB728 /* flac */,
 				320A7BAE0DCFA2F800FBB728 /* libgetopt */,
 				320A7BC60DCFA3E700FBB728 /* replaygain_synthesis */,
@@ -942,7 +942,7 @@
 				320A7BF40DCFA57800FBB728 /* libgrabbag */,
 				320A7C290DCFA6A900FBB728 /* utf8 */,
 				320A7C590DCFA77600FBB728 /* metaflac */,
-				32D86508105306D4002E8E1A /* Framework */,
+				32D86508105306D4002E8E1A /* flac.framework */,
 				322C9BAF1125AAB600FD72D8 /* iPhone lib */,
 			);
 		};
@@ -1117,7 +1117,7 @@
 /* Begin PBXTargetDependency section */
 		320A7B670DCFA12B00FBB728 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2AAC045055464E500DB518D /* libFLAC */;
+			target = D2AAC045055464E500DB518D /* libflac */;
 			targetProxy = 320A7B660DCFA12B00FBB728 /* PBXContainerItemProxy */;
 		};
 		320A7C110DCFA63700FBB728 /* PBXTargetDependency */ = {
@@ -1147,7 +1147,7 @@
 		};
 		320A7C7D0DCFA7F300FBB728 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2AAC045055464E500DB518D /* libFLAC */;
+			target = D2AAC045055464E500DB518D /* libflac */;
 			targetProxy = 320A7C7C0DCFA7F300FBB728 /* PBXContainerItemProxy */;
 		};
 		320A7C810DCFA81700FBB728 /* PBXTargetDependency */ = {
@@ -1592,7 +1592,7 @@
 					"$(SRCROOT)/flac-src/include",
 					"$(SRCROOT)/../ogg/libogg-src/include",
 				);
-				INFOPLIST_FILE = "Framework-Info.plist";
+				INFOPLIST_FILE = flac;
 				INSTALL_PATH = "@rpath";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = org.xiph.flac;
@@ -1618,7 +1618,7 @@
 					"$(SRCROOT)/flac-src/include",
 					"$(SRCROOT)/../ogg/libogg-src/include",
 				);
-				INFOPLIST_FILE = "Framework-Info.plist";
+				INFOPLIST_FILE = flac;
 				INSTALL_PATH = "@rpath";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = org.xiph.flac;
@@ -1630,7 +1630,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libFLAC" */ = {
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libflac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB91EC08733DB70010E9CD /* Debug */,
@@ -1720,7 +1720,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32D8650D105306D4002E8E1A /* Build configuration list for PBXNativeTarget "Framework" */ = {
+		32D8650D105306D4002E8E1A /* Build configuration list for PBXNativeTarget "flac.framework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32D8650B105306D4002E8E1A /* Debug */,
