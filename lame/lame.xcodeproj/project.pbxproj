@@ -241,9 +241,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		32E7363710B903D000094C8A /* Framework */ = {
+		32E7363710B903D000094C8A /* lame.framework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32E7363D10B903D000094C8A /* Build configuration list for PBXNativeTarget "Framework" */;
+			buildConfigurationList = 32E7363D10B903D000094C8A /* Build configuration list for PBXNativeTarget "lame.framework" */;
 			buildPhases = (
 				32E7363310B903D000094C8A /* Headers */,
 				32E7363410B903D000094C8A /* Resources */,
@@ -254,7 +254,7 @@
 			);
 			dependencies = (
 			);
-			name = Framework;
+			name = lame.framework;
 			productName = Framework;
 			productReference = 32E7363810B903D000094C8A /* lame.framework */;
 			productType = "com.apple.product-type.framework";
@@ -283,7 +283,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				32E7363710B903D000094C8A /* Framework */,
+				32E7363710B903D000094C8A /* lame.framework */,
 			);
 		};
 /* End PBXProject section */
@@ -447,7 +447,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32E7363D10B903D000094C8A /* Build configuration list for PBXNativeTarget "Framework" */ = {
+		32E7363D10B903D000094C8A /* Build configuration list for PBXNativeTarget "lame.framework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32E7363B10B903D000094C8A /* Debug */,
