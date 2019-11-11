@@ -292,9 +292,9 @@
 			productReference = 32CE92F10F562D7800AB328A /* wvunpack */;
 			productType = "com.apple.product-type.tool";
 		};
-		32E7363710B903D000094C8A /* Framework */ = {
+		32E7363710B903D000094C8A /* wavpack.framework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32E7363D10B903D000094C8A /* Build configuration list for PBXNativeTarget "Framework" */;
+			buildConfigurationList = 32E7363D10B903D000094C8A /* Build configuration list for PBXNativeTarget "wavpack.framework" */;
 			buildPhases = (
 				32E7363310B903D000094C8A /* Headers */,
 				32E7363410B903D000094C8A /* Resources */,
@@ -305,7 +305,7 @@
 			);
 			dependencies = (
 			);
-			name = Framework;
+			name = wavpack.framework;
 			productName = Framework;
 			productReference = 32E7363810B903D000094C8A /* wavpack.framework */;
 			productType = "com.apple.product-type.framework";
@@ -355,7 +355,7 @@
 				320A7B610DCFA0F300FBB728 /* wavpack */,
 				32CE92C80F562D0700AB328A /* wvgain */,
 				32CE92E40F562D7800AB328A /* wvunpack */,
-				32E7363710B903D000094C8A /* Framework */,
+				32E7363710B903D000094C8A /* wavpack.framework */,
 			);
 		};
 /* End PBXProject section */
@@ -980,7 +980,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32E7363D10B903D000094C8A /* Build configuration list for PBXNativeTarget "Framework" */ = {
+		32E7363D10B903D000094C8A /* Build configuration list for PBXNativeTarget "wavpack.framework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32E7363B10B903D000094C8A /* Debug */,
