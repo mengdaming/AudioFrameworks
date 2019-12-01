@@ -40,7 +40,7 @@
 		426F8C361CD8904E00E5757F /* GlobalFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BD11CD88F9C00E5757F /* GlobalFunctions.cpp */; };
 		426F8C371CD8904E00E5757F /* StdLibFileIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BD81CD88F9C00E5757F /* StdLibFileIO.cpp */; };
 		426F8C391CD8904E00E5757F /* WinFileIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BDF1CD88F9D00E5757F /* WinFileIO.cpp */; };
-		426F8C3A1CD8905800E5757F /* APECompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BE21CD88FCE00E5757F /* APECompress.h */; };
+		426F8C3A1CD8905800E5757F /* APECompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BE21CD88FCE00E5757F /* APECompress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		426F8C3B1CD8905800E5757F /* APECompressCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BE41CD88FCE00E5757F /* APECompressCore.h */; };
 		426F8C3C1CD8905800E5757F /* APECompressCreate.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BE61CD88FCE00E5757F /* APECompressCreate.h */; };
 		426F8C3D1CD8905800E5757F /* APEDecompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BE81CD88FCE00E5757F /* APEDecompress.h */; };
@@ -83,6 +83,14 @@
 		426F8C621CD8905800E5757F /* WinFileIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BE01CD88F9D00E5757F /* WinFileIO.h */; };
 		6D00A43C235CD40500B09289 /* CRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D00A43B235CD40500B09289 /* CRC.h */; };
 		6D00A43E235CD41200B09289 /* CRC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D00A43D235CD41100B09289 /* CRC.cpp */; };
+		6D21EE922381551200378537 /* APETag.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BF11CD88FCE00E5757F /* APETag.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D21EE932381554400378537 /* IO.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BD41CD88F9C00E5757F /* IO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D21EE942381556100378537 /* SmartPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BD71CD88F9C00E5757F /* SmartPtr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D21EE952381557800378537 /* NoWindows.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BD51CD88F9C00E5757F /* NoWindows.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D21EE96238155FA00378537 /* CharacterHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BCE1CD88F9C00E5757F /* CharacterHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2B73B02381541A000145A2 /* All.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BCA1CD88F9C00E5757F /* All.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2B73B12381543A000145A2 /* APECompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BE21CD88FCE00E5757F /* APECompress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2B73B223815448000145A2 /* MACLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BF51CD88FCE00E5757F /* MACLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -346,13 +354,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426F8C3A1CD8905800E5757F /* APECompress.h in Headers */,
 				426F8C531CD8905800E5757F /* All.h in Headers */,
 				426F8C411CD8905800E5757F /* APETag.h in Headers */,
 				426F8C591CD8905800E5757F /* IO.h in Headers */,
 				426F8C431CD8905800E5757F /* MACLib.h in Headers */,
 				426F8C5C1CD8905800E5757F /* SmartPtr.h in Headers */,
 				426F8C5A1CD8905800E5757F /* NoWindows.h in Headers */,
-				426F8C3A1CD8905800E5757F /* APECompress.h in Headers */,
 				426F8C3D1CD8905800E5757F /* APEDecompress.h in Headers */,
 				426F8C3E1CD8905800E5757F /* APEHeader.h in Headers */,
 				426F8C3F1CD8905800E5757F /* APEInfo.h in Headers */,
@@ -394,6 +402,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D2B73B12381543A000145A2 /* APECompress.h in Headers */,
+				6D2B73B02381541A000145A2 /* All.h in Headers */,
+				6D21EE922381551200378537 /* APETag.h in Headers */,
+				6D21EE932381554400378537 /* IO.h in Headers */,
+				6D2B73B223815448000145A2 /* MACLib.h in Headers */,
+				6D21EE942381556100378537 /* SmartPtr.h in Headers */,
+				6D21EE952381557800378537 /* NoWindows.h in Headers */,
+				6D21EE96238155FA00378537 /* CharacterHelper.h in Headers */,
 				6D00A43C235CD40500B09289 /* CRC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +553,7 @@
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -548,7 +565,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.monkeysaudio;
 				PRODUCT_NAME = mac;
 				WRAPPER_EXTENSION = framework;
@@ -558,6 +575,7 @@
 		1DEB91AF08733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -567,7 +585,7 @@
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.monkeysaudio;
 				PRODUCT_NAME = mac;
 				WRAPPER_EXTENSION = framework;
@@ -578,6 +596,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32E7398910B9D32D00094C8A /* Debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -600,6 +619,9 @@
 				ENABLE_TESTABILITY = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -607,6 +629,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32E7398A10B9D32D00094C8A /* Release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -629,6 +652,9 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -636,6 +662,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -679,6 +706,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;

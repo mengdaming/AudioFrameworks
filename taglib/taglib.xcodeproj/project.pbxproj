@@ -249,6 +249,19 @@
 		426F8B1B1CD87E3100E5757F /* wavpackproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F899B1CD87DE300E5757F /* wavpackproperties.cpp */; };
 		426F8B1C1CD87E3100E5757F /* xmfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F899E1CD87DE300E5757F /* xmfile.cpp */; };
 		426F8B1D1CD87E3100E5757F /* xmproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F89A01CD87DE300E5757F /* xmproperties.cpp */; };
+		6D0B551F238B0888004691FB /* id3v2framefactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89241CD87DE300E5757F /* id3v2framefactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D0B5520238B0AF4004691FB /* commentsframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F88FC1CD87DE300E5757F /* commentsframe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D0B5521238C9E0F004691FB /* aiffproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89541CD87DE300E5757F /* aiffproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2DC1802381B8F300C92CD9 /* mpegfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F892C1CD87DE300E5757F /* mpegfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2DC1812381B92800C92CD9 /* id3v2tag.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F892A1CD87DE300E5757F /* id3v2tag.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2DC1822381B93B00C92CD9 /* id3v2frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89221CD87DE300E5757F /* id3v2frame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2DC1832381B95200C92CD9 /* attachedpictureframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F88F81CD87DE300E5757F /* attachedpictureframe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2DC1842381B96600C92CD9 /* textidentificationframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89101CD87DE300E5757F /* textidentificationframe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2DC1852381B97100C92CD9 /* uniquefileidentifierframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89121CD87DE300E5757F /* uniquefileidentifierframe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2DC1862381B99200C92CD9 /* mpcfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F88EC1CD87DE300E5757F /* mpcfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2DC1872381B99E00C92CD9 /* aifffile.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89521CD87DE300E5757F /* aifffile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2DC1882381B9AB00C92CD9 /* wavfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F895C1CD87DE300E5757F /* wavfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D3332732381B3A3009943DD /* tpropertymap.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89861CD87DE300E5757F /* tpropertymap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D422DD72379D29E00327F4E /* tfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89781CD87DE300E5757F /* tfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D422DD82379D2BC00327F4E /* tbytevectorlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89701CD87DE300E5757F /* tbytevectorlist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D422DD92379D34900327F4E /* tbytevector.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F896E1CD87DE300E5757F /* tbytevector.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -269,6 +282,15 @@
 		6D422E172379E24600327F4E /* speexproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89471CD87DE300E5757F /* speexproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D422E182379E2AD00327F4E /* oggflacfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89371CD87DE300E5757F /* oggflacfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D422E192379E30800327F4E /* flacproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F88CB1CD87DE300E5757F /* flacproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D5FB70D238C9E8C00A1F30A /* infotag.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F895A1CD87DE300E5757F /* infotag.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D5FB70E238C9EEB00A1F30A /* wavproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F895E1CD87DE300E5757F /* wavproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D5FB70F2392E7E200A1F30A /* mpcproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F88EE1CD87DE300E5757F /* mpcproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D858D9C2381533400E58E4A /* fileref.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F88C21CD87DE300E5757F /* fileref.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DDB3D13238B074200242353 /* id3v2header.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89261CD87DE300E5757F /* id3v2header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DDB3D14238B07CC00242353 /* tstringhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F898D1CD87DE300E5757F /* tstringhandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DF2BC1A238B0242009FD4DB /* mpegproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89301CD87DE300E5757F /* mpegproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DF2BC1B238B02F1009FD4DB /* mpegheader.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F892E1CD87DE300E5757F /* mpegheader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DF2BC1C238B035C009FD4DB /* rifffile.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89561CD87DE300E5757F /* rifffile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DF8B2F92378779C00210094 /* taglib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* taglib.framework */; };
 		6DF8B3302379CCF800210094 /* vorbisfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F894A1CD87DE300E5757F /* vorbisfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DF8B3312379D06500210094 /* taglib_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89661CD87DE300E5757F /* taglib_export.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -287,7 +309,7 @@
 		322D79E0113047F8006676FC /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
 		324B3788105C754F00B1AA21 /* taglib_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taglib_config.h; sourceTree = "<group>"; };
 		3270FB851322FFCA00B661DB /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
-		426F7F781CD8543700E5757F /* libtag.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtag.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		426F7F781CD8543700E5757F /* libtaglib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtaglib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		426F88691CD87DE300E5757F /* .astylerc */ = {isa = PBXFileReference; lastKnownFileType = text; path = .astylerc; sourceTree = "<group>"; };
 		426F886A1CD87DE300E5757F /* .editorconfig */ = {isa = PBXFileReference; lastKnownFileType = text; path = .editorconfig; sourceTree = "<group>"; };
 		426F886B1CD87DE300E5757F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -739,7 +761,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* taglib.framework */,
-				426F7F781CD8543700E5757F /* libtag.a */,
+				426F7F781CD8543700E5757F /* libtaglib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1678,6 +1700,28 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D5FB70F2392E7E200A1F30A /* mpcproperties.h in Headers */,
+				6D5FB70E238C9EEB00A1F30A /* wavproperties.h in Headers */,
+				6D5FB70D238C9E8C00A1F30A /* infotag.h in Headers */,
+				6D0B5521238C9E0F004691FB /* aiffproperties.h in Headers */,
+				6D0B5520238B0AF4004691FB /* commentsframe.h in Headers */,
+				6D0B551F238B0888004691FB /* id3v2framefactory.h in Headers */,
+				6DDB3D14238B07CC00242353 /* tstringhandler.h in Headers */,
+				6DDB3D13238B074200242353 /* id3v2header.h in Headers */,
+				6DF2BC1C238B035C009FD4DB /* rifffile.h in Headers */,
+				6DF2BC1B238B02F1009FD4DB /* mpegheader.h in Headers */,
+				6DF2BC1A238B0242009FD4DB /* mpegproperties.h in Headers */,
+				6D2DC1882381B9AB00C92CD9 /* wavfile.h in Headers */,
+				6D2DC1872381B99E00C92CD9 /* aifffile.h in Headers */,
+				6D2DC1862381B99200C92CD9 /* mpcfile.h in Headers */,
+				6D2DC1852381B97100C92CD9 /* uniquefileidentifierframe.h in Headers */,
+				6D2DC1842381B96600C92CD9 /* textidentificationframe.h in Headers */,
+				6D2DC1832381B95200C92CD9 /* attachedpictureframe.h in Headers */,
+				6D2DC1822381B93B00C92CD9 /* id3v2frame.h in Headers */,
+				6D2DC1812381B92800C92CD9 /* id3v2tag.h in Headers */,
+				6D2DC1802381B8F300C92CD9 /* mpegfile.h in Headers */,
+				6D3332732381B3A3009943DD /* tpropertymap.h in Headers */,
+				6D858D9C2381533400E58E4A /* fileref.h in Headers */,
 				324B3789105C754F00B1AA21 /* taglib_config.h in Headers */,
 				6D422DDF2379D5AF00327F4E /* taglib.h in Headers */,
 				6D422DDA2379D36300327F4E /* tag.h in Headers */,
@@ -1711,9 +1755,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		426F7F771CD8543700E5757F /* tag */ = {
+		426F7F771CD8543700E5757F /* taglib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 426F7F7E1CD8543700E5757F /* Build configuration list for PBXNativeTarget "tag" */;
+			buildConfigurationList = 426F7F7E1CD8543700E5757F /* Build configuration list for PBXNativeTarget "taglib" */;
 			buildPhases = (
 				426F804F1CD8558700E5757F /* Resources */,
 				426F7F741CD8543700E5757F /* Sources */,
@@ -1724,9 +1768,9 @@
 			);
 			dependencies = (
 			);
-			name = tag;
+			name = taglib;
 			productName = tag;
-			productReference = 426F7F781CD8543700E5757F /* libtag.a */;
+			productReference = 426F7F781CD8543700E5757F /* libtaglib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		8DC2EF4F0486A6940098B216 /* taglib.framework */ = {
@@ -1779,7 +1823,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* taglib.framework */,
-				426F7F771CD8543700E5757F /* tag */,
+				426F7F771CD8543700E5757F /* taglib */,
 			);
 		};
 /* End PBXProject section */
@@ -1962,6 +2006,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kde.taglib;
 				PRODUCT_NAME = taglib;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1995,6 +2041,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kde.taglib;
 				PRODUCT_NAME = taglib;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -2003,6 +2051,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 322D79DF113047F8006676FC /* Debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -2025,6 +2074,9 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -2032,6 +2084,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 322D79E0113047F8006676FC /* Release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -2054,6 +2107,9 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -2061,6 +2117,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -2105,6 +2162,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -2112,6 +2170,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -2150,6 +2209,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -2174,7 +2234,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		426F7F7E1CD8543700E5757F /* Build configuration list for PBXNativeTarget "tag" */ = {
+		426F7F7E1CD8543700E5757F /* Build configuration list for PBXNativeTarget "taglib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				426F7F7F1CD8543700E5757F /* Debug */,
