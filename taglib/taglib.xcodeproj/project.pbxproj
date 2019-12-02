@@ -309,7 +309,7 @@
 		322D79E0113047F8006676FC /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
 		324B3788105C754F00B1AA21 /* taglib_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taglib_config.h; sourceTree = "<group>"; };
 		3270FB851322FFCA00B661DB /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
-		426F7F781CD8543700E5757F /* libtaglib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtaglib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		426F7F781CD8543700E5757F /* libtag.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtag.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		426F88691CD87DE300E5757F /* .astylerc */ = {isa = PBXFileReference; lastKnownFileType = text; path = .astylerc; sourceTree = "<group>"; };
 		426F886A1CD87DE300E5757F /* .editorconfig */ = {isa = PBXFileReference; lastKnownFileType = text; path = .editorconfig; sourceTree = "<group>"; };
 		426F886B1CD87DE300E5757F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -761,7 +761,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* taglib.framework */,
-				426F7F781CD8543700E5757F /* libtaglib.a */,
+				426F7F781CD8543700E5757F /* libtag.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1755,9 +1755,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		426F7F771CD8543700E5757F /* taglib */ = {
+		426F7F771CD8543700E5757F /* tag */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 426F7F7E1CD8543700E5757F /* Build configuration list for PBXNativeTarget "taglib" */;
+			buildConfigurationList = 426F7F7E1CD8543700E5757F /* Build configuration list for PBXNativeTarget "tag" */;
 			buildPhases = (
 				426F804F1CD8558700E5757F /* Resources */,
 				426F7F741CD8543700E5757F /* Sources */,
@@ -1768,9 +1768,9 @@
 			);
 			dependencies = (
 			);
-			name = taglib;
+			name = tag;
 			productName = tag;
-			productReference = 426F7F781CD8543700E5757F /* libtaglib.a */;
+			productReference = 426F7F781CD8543700E5757F /* libtag.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		8DC2EF4F0486A6940098B216 /* taglib.framework */ = {
@@ -1823,7 +1823,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* taglib.framework */,
-				426F7F771CD8543700E5757F /* taglib */,
+				426F7F771CD8543700E5757F /* tag */,
 			);
 		};
 /* End PBXProject section */
@@ -2104,7 +2104,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2234,7 +2234,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		426F7F7E1CD8543700E5757F /* Build configuration list for PBXNativeTarget "taglib" */ = {
+		426F7F7E1CD8543700E5757F /* Build configuration list for PBXNativeTarget "tag" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				426F7F7F1CD8543700E5757F /* Debug */,

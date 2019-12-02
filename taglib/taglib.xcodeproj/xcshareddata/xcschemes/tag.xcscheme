@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "426F7F771CD8543700E5757F"
-               BuildableName = "libtaglib.a"
-               BlueprintName = "taglib"
+               BuildableName = "libtag.a"
+               BlueprintName = "tag"
                ReferencedContainer = "container:taglib.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -55,8 +55,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "426F7F771CD8543700E5757F"
-            BuildableName = "libtaglib.a"
-            BlueprintName = "taglib"
+            BuildableName = "libtag.a"
+            BlueprintName = "tag"
             ReferencedContainer = "container:taglib.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
