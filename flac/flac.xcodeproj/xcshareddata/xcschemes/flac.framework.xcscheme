@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1110"
+   LastUpgradeVersion = "1130"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "426F7EBA1CD84BE400E5757F"
-               BuildableName = "libmp4v2.a"
-               BlueprintName = "mp4v2"
-               ReferencedContainer = "container:mp4v2.xcodeproj">
+               BlueprintIdentifier = "32D86508105306D4002E8E1A"
+               BuildableName = "FLAC.framework"
+               BlueprintName = "flac.framework"
+               ReferencedContainer = "container:flac.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -50,10 +50,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "426F7EBA1CD84BE400E5757F"
-            BuildableName = "libmp4v2.a"
-            BlueprintName = "mp4v2"
-            ReferencedContainer = "container:mp4v2.xcodeproj">
+            BlueprintIdentifier = "32D86508105306D4002E8E1A"
+            BuildableName = "FLAC.framework"
+            BlueprintName = "flac.framework"
+            ReferencedContainer = "container:flac.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

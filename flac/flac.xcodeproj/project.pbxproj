@@ -137,6 +137,21 @@
 		426F805F1CD856EC00E5757F /* ordinals.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D865A410530AF0002E8E1A /* ordinals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		426F80601CD856EC00E5757F /* stream_decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D865A510530AF0002E8E1A /* stream_decoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		426F80611CD856EC00E5757F /* stream_encoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D865A610530AF0002E8E1A /* stream_encoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D596478239D722D00BED05A /* decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B6A0DCFA14E00FBB728 /* decode.c */; };
+		6D596479239D723700BED05A /* encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B6C0DCFA14E00FBB728 /* encode.c */; };
+		6D59647B239D725D00BED05A /* analyze.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B680DCFA14E00FBB728 /* analyze.c */; };
+		6D59647C239D73CB00BED05A /* replaygain_synthesis.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7BCA0DCFA42100FBB728 /* replaygain_synthesis.c */; };
+		6D59647D239D764A00BED05A /* foreign_metadata.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B6E0DCFA14E00FBB728 /* foreign_metadata.c */; };
+		6D59647E239D766A00BED05A /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B740DCFA14E00FBB728 /* utils.c */; };
+		6D59647F239D76BF00BED05A /* replaygain_analysis.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7BE50DCFA52000FBB728 /* replaygain_analysis.c */; };
+		6D596480239D778B00BED05A /* cuesheet.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7BF80DCFA5B800FBB728 /* cuesheet.c */; };
+		6D596481239D778B00BED05A /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7BF90DCFA5B800FBB728 /* file.c */; };
+		6D596482239D778B00BED05A /* picture.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7BFA0DCFA5B800FBB728 /* picture.c */; };
+		6D596483239D778B00BED05A /* replaygain.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7BFB0DCFA5B800FBB728 /* replaygain.c */; };
+		6D596484239D778B00BED05A /* seektable.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7BFC0DCFA5B800FBB728 /* seektable.c */; };
+		6D596485239D79E300BED05A /* iffscan.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B700DCFA14E00FBB728 /* iffscan.c */; };
+		6D596486239D79E300BED05A /* local_string_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B710DCFA14E00FBB728 /* local_string_utils.c */; };
+		6D59648A239D7D5400BED05A /* charset.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7C2E0DCFA6D800FBB728 /* charset.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -916,7 +931,7 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = sbooth.org;
 			};
 			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "flac" */;
@@ -1056,6 +1071,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D59648A239D7D5400BED05A /* charset.c in Sources */,
+				6D596485239D79E300BED05A /* iffscan.c in Sources */,
+				6D596486239D79E300BED05A /* local_string_utils.c in Sources */,
+				6D596480239D778B00BED05A /* cuesheet.c in Sources */,
+				6D596481239D778B00BED05A /* file.c in Sources */,
+				6D596482239D778B00BED05A /* picture.c in Sources */,
+				6D596483239D778B00BED05A /* replaygain.c in Sources */,
+				6D596484239D778B00BED05A /* seektable.c in Sources */,
+				6D59647F239D76BF00BED05A /* replaygain_analysis.c in Sources */,
+				6D59647E239D766A00BED05A /* utils.c in Sources */,
+				6D59647D239D764A00BED05A /* foreign_metadata.c in Sources */,
+				6D59647C239D73CB00BED05A /* replaygain_synthesis.c in Sources */,
+				6D59647B239D725D00BED05A /* analyze.c in Sources */,
+				6D596479239D723700BED05A /* encode.c in Sources */,
+				6D596478239D722D00BED05A /* decode.c in Sources */,
 				32D8650F105306FB002E8E1A /* bitmath.c in Sources */,
 				32D86510105306FC002E8E1A /* bitreader.c in Sources */,
 				32D86511105306FD002E8E1A /* bitwriter.c in Sources */,
@@ -1222,7 +1252,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32437F9B10CE4D5E005A8B46 /* Debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1255,7 +1284,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32437F9C10CE4D5E005A8B46 /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1586,8 +1614,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -1599,12 +1630,18 @@
 					"$(SRCROOT)/flac-src/src/libFLAC/include",
 					"$(SRCROOT)/flac-src/include",
 					"$(SRCROOT)/../ogg/libogg-src/include",
+					"$(SRCROOT)/flac-src/include/share",
+					"$(SRCROOT)/flac-src/src/share/replaygain_synthesis/include",
 				);
 				INFOPLIST_FILE = flac;
 				INSTALL_PATH = "@rpath";
+				IPHONEOS_DEPLOYMENT_TARGET = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = org.xiph.flac;
 				PRODUCT_NAME = FLAC;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TVOS_DEPLOYMENT_TARGET = "";
+				WATCHOS_DEPLOYMENT_TARGET = "";
 			};
 			name = Debug;
 		};
@@ -1613,9 +1650,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -1625,13 +1665,19 @@
 					"$(SRCROOT)/flac-src/src/libFLAC/include",
 					"$(SRCROOT)/flac-src/include",
 					"$(SRCROOT)/../ogg/libogg-src/include",
+					"$(SRCROOT)/flac-src/include/share",
+					"$(SRCROOT)/flac-src/src/share/replaygain_synthesis/include",
 				);
 				INFOPLIST_FILE = flac;
 				INSTALL_PATH = "@rpath";
+				IPHONEOS_DEPLOYMENT_TARGET = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = org.xiph.flac;
 				PRODUCT_NAME = FLAC;
-				ZERO_LINK = NO;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TVOS_DEPLOYMENT_TARGET = "";
+				WATCHOS_DEPLOYMENT_TARGET = "";
+				ZERO_LINK = "";
 			};
 			name = Release;
 		};
