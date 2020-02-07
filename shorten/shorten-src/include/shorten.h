@@ -16,7 +16,9 @@
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #else
+#ifndef HAVE_STRERROR
 #define HAVE_STRERROR 1
+#endif
 #define HAVE_INTTYPES_H 1
 #define HAVE_VSNPRINTF 1
 #define SIZEOF_UNSIGNED_LONG 4
