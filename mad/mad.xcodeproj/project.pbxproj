@@ -206,10 +206,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				ja,
-				fr,
 				Base,
-				de,
 				en,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* MAD */;

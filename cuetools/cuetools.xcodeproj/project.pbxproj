@@ -203,11 +203,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				fr,
 				Base,
-				de,
 				en,
-				ja,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* MAD */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;

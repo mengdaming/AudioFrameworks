@@ -941,9 +941,6 @@
 			knownRegions = (
 				Base,
 				en,
-				ja,
-				de,
-				fr,
 			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* flac */;
 			projectDirPath = "";

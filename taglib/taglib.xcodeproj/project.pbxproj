@@ -1949,9 +1949,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				ja,
-				fr,
-				de,
 				en,
 				Base,
 			);

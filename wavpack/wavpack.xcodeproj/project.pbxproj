@@ -342,10 +342,7 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				Base,
-				ja,
-				fr,
 				en,
-				de,
 			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* flac */;
 			projectDirPath = "";
