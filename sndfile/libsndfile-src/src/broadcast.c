@@ -83,7 +83,7 @@ broadcast_var_set (SF_PRIVATE *psf, const SF_BROADCAST_INFO * info, size_t datas
 	/* Force coding_history_size to be even. */
 	len = strlen (psf->broadcast_16k->coding_history) ;
 	len += (len & 1) ? 1 : 2 ;
-	psf->broadcast_16k->coding_history_size = len ;
+	psf->broadcast_16k->coding_history_size = (uint)len ;
 
 	/* Currently writing this version. */
 	psf->broadcast_16k->version = 1 ;
@@ -112,7 +112,7 @@ broadcast_var_get (SF_PRIVATE *psf, SF_BROADCAST_INFO * data, size_t datasize)
 static int
 gen_coding_history (char * added_history, int added_history_max, const SF_INFO * psfinfo)
 {	char chnstr [16] ;
-	int count, width ;
+	ushort count, width ;
 
 	/*
 	**	From : http://www.sr.se/utveckling/tu/bwf/docs/codhist2.htm

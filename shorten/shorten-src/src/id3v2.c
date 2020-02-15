@@ -36,6 +36,10 @@ typedef struct {
   unsigned char size[4];
 } _id3v2_header;
 
+int tagcmp(char *got,char *expected);
+unsigned long synchsafe_int_to_ulong(unsigned char *buf);
+
+
 int tagcmp(char *got,char *expected)
 /* compare got against expected, up to the length of expected */
 {

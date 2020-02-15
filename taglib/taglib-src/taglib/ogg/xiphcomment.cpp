@@ -397,8 +397,8 @@ ByteVector Ogg::XiphComment::render(bool addFramingBit) const
     }
   }
 
-  for(PictureConstIterator it = d->pictureList.begin(); it != d->pictureList.end(); ++it) {
-    ByteVector picture = (*it)->render().toBase64();
+  for(PictureConstIterator it2 = d->pictureList.begin(); it2 != d->pictureList.end(); ++it2) {
+    ByteVector picture = (*it2)->render().toBase64();
     data.append(ByteVector::fromUInt32LE(picture.size() + 23));
     data.append("METADATA_BLOCK_PICTURE=");
     data.append(picture);

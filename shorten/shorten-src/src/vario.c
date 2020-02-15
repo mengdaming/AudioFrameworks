@@ -50,7 +50,7 @@ ulong word_get(shn_file *this_shn)
   {
     this_shn->vars.last_file_position = this_shn->vars.bytes_read;
 
-    bytes = fread((uchar*) this_shn->decode_state->getbuf, 1, BUFSIZ, this_shn->vars.fd);
+    bytes = (int)fread((uchar*) this_shn->decode_state->getbuf, 1, BUFSIZ, this_shn->vars.fd);
     this_shn->decode_state->nbyteget += bytes;
 
     if(this_shn->decode_state->nbyteget < 4) {

@@ -31,7 +31,7 @@ static int get_wave_header(shn_file *this_shn);
 static int shn_init_decode_state(shn_file *this_shn);
 static int write_to_buffer(shn_file *this_shn, uchar *read_buffer, int bytes_to_read);
 
-static char *magic = MAGIC;
+static char *magic_global = MAGIC;
 
 int shn_seekable(shn_file *this_shn) {
 	if(!this_shn)
@@ -710,13 +710,13 @@ int shn_init_decoder(shn_file *this_shn) {
 				shn_error_fatal(this_shn,"No magic number");
 				return 0;
 			}
-			if(magic[nscan] != '\0' && byte == magic[nscan])
+			if(magic_global[nscan] != '\0' && byte == magic_global[nscan])
 				nscan++;
 			else
-				if(magic[nscan] == '\0' && byte <= MAX_VERSION)
+				if(magic_global[nscan] == '\0' && byte <= MAX_VERSION)
 					this_shn->status.version = byte;
 			else {
-				if(byte == magic[0])
+				if(byte == magic_global[0])
 					nscan = 1;
 				else {
 					nscan = 0;
@@ -911,7 +911,7 @@ int shn_read(shn_file *this_shn, uchar *read_buffer, int bytes_to_read) {
 	/***********************/
 	
 	if(!this_shn->status.datarest) return 0;
-	if(this_shn->status.datarest*shn_get_channels(this_shn)*shn_get_bitspersample(this_shn)/8 < bytes_to_read) {
+	if((int)(this_shn->status.datarest*shn_get_channels(this_shn)*shn_get_bitspersample(this_shn)/8) < bytes_to_read) {
 		bytes_to_read = this_shn->status.datarest*shn_get_channels(this_shn)*shn_get_bitspersample(this_shn)/8;
 	}
 	this_shn->status.datarest -= bytes_to_read/(shn_get_channels(this_shn)*shn_get_bitspersample(this_shn)/8);
@@ -1075,7 +1075,7 @@ int shn_read(shn_file *this_shn, uchar *read_buffer, int bytes_to_read) {
 							
 							this_shn->status.bitshift = shn_uchar_to_ushort_le(seek_info->data+22);
 							
-							ulong seekto_offset = shn_uchar_to_ulong_le(seek_info->data+8) + this_shn->vars.seek_offset;
+							ulong seekto_offset = shn_uchar_to_ulong_le(seek_info->data+8) + (ulong)this_shn->vars.seek_offset;
 							
 							fseek(this_shn->vars.fd,(slong)seekto_offset,SEEK_SET);
 							fread((uchar*) this_shn->decode_state->getbuf, 1, BUFSIZ, this_shn->vars.fd);

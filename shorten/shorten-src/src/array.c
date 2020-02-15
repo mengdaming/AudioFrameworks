@@ -33,7 +33,7 @@ slong **long2d(ulong n0, ulong n1, shn_file *this_shn) {
     slong *array1 = (slong*) (array0 + n0);
     int i;
 
-    for(i = 0; i < n0; i++)
+    for(i = 0; i < (int)n0; i++)
       array0[i] = array1 + i * n1;
   }
   return(array0);

@@ -29,6 +29,8 @@
 #include "config.h"
 #endif
 
+void print_lines(char *prefix,char *message);
+
 void print_lines(char *prefix,char *message)
 {
   char *head, *tail;
@@ -93,7 +95,7 @@ void shn_error_fatal(shn_file *this_shn,char *complaint, ...)
     if (0 == this_shn->vars.fatal_error) {
       this_shn->vars.fatal_error = 1;
       this_shn->vars.going = 0;
-      shn_vsnprintf(this_shn->vars.fatal_error_msg,BUF_SIZE,complaint,args);
+      shn_vsnprintf((char *)this_shn->vars.fatal_error_msg,BUF_SIZE,complaint,args);
     }
   }
 
