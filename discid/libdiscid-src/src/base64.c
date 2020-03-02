@@ -81,6 +81,8 @@
  *	    pointer to return destination length
  * Returns: destination as BASE64
  */
+unsigned char *rfc822_binary (void *src,unsigned long srcl,unsigned long *len);
+
 
 unsigned char *rfc822_binary (void *src,unsigned long srcl,unsigned long *len)
 {

@@ -1,14 +1,14 @@
 /* (PD) 2001 The Bitzi Corporation
- * Please see file COPYING or http://bitzi.com/publicdomain 
+ * Please see file COPYING or http://bitzi.com/publicdomain
  * for more info.
  *
- * NIST Secure Hash Algorithm 
- * heavily modified by Uwe Hollerbach <uh@alumni.caltech edu> 
- * from Peter C. Gutmann's implementation as found in 
- * Applied Cryptography by Bruce Schneier 
- * Further modifications to include the "UNRAVEL" stuff, below 
+ * NIST Secure Hash Algorithm
+ * heavily modified by Uwe Hollerbach <uh@alumni.caltech edu>
+ * from Peter C. Gutmann's implementation as found in
+ * Applied Cryptography by Bruce Schneier
+ * Further modifications to include the "UNRAVEL" stuff, below
  *
- * This code is in the public domain 
+ * This code is in the public domain
  *
  * $Id$
  */
@@ -48,28 +48,28 @@
 /* the generic case, for when the overall rotation is not unraveled */
 
 #define FG(n)	\
-    T = T32(R32(A,5) + f##n(B,C,D) + E + *WP++ + CONST##n);	\
-    E = D; D = C; C = R32(B,30); B = A; A = T
+T = T32(R32(A,5) + f##n(B,C,D) + E + *WP++ + CONST##n);	\
+E = D; D = C; C = R32(B,30); B = A; A = T
 
 /* specific cases, for when the overall rotation is unraveled */
 
 #define FA(n)	\
-    T = T32(R32(A,5) + f##n(B,C,D) + E + *WP++ + CONST##n); B = R32(B,30)
+T = T32(R32(A,5) + f##n(B,C,D) + E + *WP++ + CONST##n); B = R32(B,30)
 
 #define FB(n)	\
-    E = T32(R32(T,5) + f##n(A,B,C) + D + *WP++ + CONST##n); A = R32(A,30)
+E = T32(R32(T,5) + f##n(A,B,C) + D + *WP++ + CONST##n); A = R32(A,30)
 
 #define FC(n)	\
-    D = T32(R32(E,5) + f##n(T,A,B) + C + *WP++ + CONST##n); T = R32(T,30)
+D = T32(R32(E,5) + f##n(T,A,B) + C + *WP++ + CONST##n); T = R32(T,30)
 
 #define FD(n)	\
-    C = T32(R32(D,5) + f##n(E,T,A) + B + *WP++ + CONST##n); E = R32(E,30)
+C = T32(R32(D,5) + f##n(E,T,A) + B + *WP++ + CONST##n); E = R32(E,30)
 
 #define FE(n)	\
-    B = T32(R32(C,5) + f##n(D,E,T) + A + *WP++ + CONST##n); D = R32(D,30)
+B = T32(R32(C,5) + f##n(D,E,T) + A + *WP++ + CONST##n); D = R32(D,30)
 
 #define FT(n)	\
-    A = T32(R32(B,5) + f##n(C,D,E) + T + *WP++ + CONST##n); C = R32(C,30)
+A = T32(R32(B,5) + f##n(C,D,E) + T + *WP++ + CONST##n); C = R32(C,30)
 
 /* do SHA transformation */
 
@@ -78,67 +78,67 @@ static void sha_transform(SHA_INFO *sha_info)
     int i;
     SHA_BYTE *dp;
     SHA_LONG T, A, B, C, D, E, W[80], *WP;
-
+    
     dp = sha_info->data;
-
-/*
-the following makes sure that at least one code block below is
-traversed or an error is reported, without the necessity for nested
-preprocessor if/else/endif blocks, which are a great pain in the
-nether regions of the anatomy...
-*/
+    
+    /*
+     the following makes sure that at least one code block below is
+     traversed or an error is reported, without the necessity for nested
+     preprocessor if/else/endif blocks, which are a great pain in the
+     nether regions of the anatomy...
+     */
 #undef SWAP_DONE
-
+    
 #if (SHA_BYTE_ORDER == 1234)
 #define SWAP_DONE
     for (i = 0; i < 16; ++i) {
-	T = *((SHA_LONG *) dp);
-	dp += 4;
-	W[i] =  ((T << 24) & 0xff000000) | ((T <<  8) & 0x00ff0000) |
-		((T >>  8) & 0x0000ff00) | ((T >> 24) & 0x000000ff);
+        T = *((SHA_LONG *) dp);
+        dp += 4;
+        W[i] =  ((T << 24) & 0xff000000) | ((T <<  8) & 0x00ff0000) |
+        ((T >>  8) & 0x0000ff00) | ((T >> 24) & 0x000000ff);
     }
 #endif /* SHA_BYTE_ORDER == 1234 */
-
+    
 #if (SHA_BYTE_ORDER == 4321)
 #define SWAP_DONE
     for (i = 0; i < 16; ++i) {
-	T = *((SHA_LONG *) dp);
-	dp += 4;
-	W[i] = T32(T);
+        T = *((SHA_LONG *) dp);
+        dp += 4;
+        W[i] = T32(T);
     }
 #endif /* SHA_BYTE_ORDER == 4321 */
-
+    
 #if (SHA_BYTE_ORDER == 12345678)
 #define SWAP_DONE
     for (i = 0; i < 16; i += 2) {
-	T = *((SHA_LONG *) dp);
-	dp += 8;
-	W[i] =  ((T << 24) & 0xff000000) | ((T <<  8) & 0x00ff0000) |
-		((T >>  8) & 0x0000ff00) | ((T >> 24) & 0x000000ff);
-	T >>= 32;
-	W[i+1] = ((T << 24) & 0xff000000) | ((T <<  8) & 0x00ff0000) |
-		 ((T >>  8) & 0x0000ff00) | ((T >> 24) & 0x000000ff);
+        T = *((SHA_LONG *) dp);
+        dp += 8;
+        W[i] =  ((T << 24) & 0xff000000) | ((T <<  8) & 0x00ff0000) |
+        ((T >>  8) & 0x0000ff00) | ((T >> 24) & 0x000000ff);
+        T >>= 32;
+        W[i+1] = ((T << 24) & 0xff000000) | ((T <<  8) & 0x00ff0000) |
+        ((T >>  8) & 0x0000ff00) | ((T >> 24) & 0x000000ff);
     }
 #endif /* SHA_BYTE_ORDER == 12345678 */
-
+    
 #if (SHA_BYTE_ORDER == 87654321)
 #define SWAP_DONE
     for (i = 0; i < 16; i += 2) {
-	T = *((SHA_LONG *) dp);
-	dp += 8;
-	W[i] = T32(T >> 32);
-	W[i+1] = T32(T);
+        T = *((SHA_LONG *) dp);
+        dp += 8;
+        W[i] = T32(T >> 32);
+        W[i+1] = T32(T);
     }
 #endif /* SHA_BYTE_ORDER == 87654321 */
-
+    
 #ifndef SWAP_DONE
 #error Unknown byte order -- you need to add code here
 #endif /* SWAP_DONE */
-
+    
     for (i = 16; i < 80; ++i) {
-	W[i] = W[i-3] ^ W[i-8] ^ W[i-14] ^ W[i-16];
+        W[i] = W[i-3] ^ W[i-8] ^ W[i-14] ^ W[i-16];
 #if (SHA_VERSION == 1)
-	W[i] = R32(W[i], 1);
+        W[i] = R32(W[i], 1);
 #endif /* SHA_VERSION */
     }
     A = sha_info->digest[0];
@@ -205,33 +205,33 @@ void sha_update(SHA_INFO *sha_info, SHA_BYTE *buffer, int count)
 {
     int i;
     SHA_LONG clo;
-
+    
     clo = T32(sha_info->count_lo + ((SHA_LONG) count << 3));
     if (clo < sha_info->count_lo) {
-	++sha_info->count_hi;
+        ++sha_info->count_hi;
     }
     sha_info->count_lo = clo;
     sha_info->count_hi += (SHA_LONG) count >> 29;
     if (sha_info->local) {
-	i = SHA_BLOCKSIZE - sha_info->local;
-	if (i > count) {
-	    i = count;
-	}
-	memcpy(((SHA_BYTE *) sha_info->data) + sha_info->local, buffer, i);
-	count -= i;
-	buffer += i;
-	sha_info->local += i;
-	if (sha_info->local == SHA_BLOCKSIZE) {
-	    sha_transform(sha_info);
-	} else {
-	    return;
-	}
+        i = SHA_BLOCKSIZE - sha_info->local;
+        if (i > count) {
+            i = count;
+        }
+        memcpy(((SHA_BYTE *) sha_info->data) + sha_info->local, buffer, i);
+        count -= i;
+        buffer += i;
+        sha_info->local += i;
+        if (sha_info->local == SHA_BLOCKSIZE) {
+            sha_transform(sha_info);
+        } else {
+            return;
+        }
     }
     while (count >= SHA_BLOCKSIZE) {
-	memcpy(sha_info->data, buffer, SHA_BLOCKSIZE);
-	buffer += SHA_BLOCKSIZE;
-	count -= SHA_BLOCKSIZE;
-	sha_transform(sha_info);
+        memcpy(sha_info->data, buffer, SHA_BLOCKSIZE);
+        buffer += SHA_BLOCKSIZE;
+        count -= SHA_BLOCKSIZE;
+        sha_transform(sha_info);
     }
     memcpy(sha_info->data, buffer, count);
     sha_info->local = count;
@@ -243,18 +243,18 @@ void sha_final(unsigned char digest[20], SHA_INFO *sha_info)
 {
     int count;
     SHA_LONG lo_bit_count, hi_bit_count;
-
+    
     lo_bit_count = sha_info->count_lo;
     hi_bit_count = sha_info->count_hi;
     count = (int) ((lo_bit_count >> 3) & 0x3f);
     ((SHA_BYTE *) sha_info->data)[count++] = 0x80;
     if (count > SHA_BLOCKSIZE - 8) {
-	memset(((SHA_BYTE *) sha_info->data) + count, 0, SHA_BLOCKSIZE - count);
-	sha_transform(sha_info);
-	memset((SHA_BYTE *) sha_info->data, 0, SHA_BLOCKSIZE - 8);
+        memset(((SHA_BYTE *) sha_info->data) + count, 0, SHA_BLOCKSIZE - count);
+        sha_transform(sha_info);
+        memset((SHA_BYTE *) sha_info->data, 0, SHA_BLOCKSIZE - 8);
     } else {
-	memset(((SHA_BYTE *) sha_info->data) + count, 0,
-	    SHA_BLOCKSIZE - 8 - count);
+        memset(((SHA_BYTE *) sha_info->data) + count, 0,
+               SHA_BLOCKSIZE - 8 - count);
     }
     sha_info->data[56] = (unsigned char) ((hi_bit_count >> 24) & 0xff);
     sha_info->data[57] = (unsigned char) ((hi_bit_count >> 16) & 0xff);
@@ -293,12 +293,12 @@ void sha_final(unsigned char digest[20], SHA_INFO *sha_info)
 
 void sha_stream(unsigned char digest[20], SHA_INFO *sha_info, FILE *fin)
 {
-    int i;
+    size_t i;
     SHA_BYTE data[BLOCK_SIZE];
-
+    
     sha_init(sha_info);
     while ((i = fread(data, 1, BLOCK_SIZE, fin)) > 0) {
-	sha_update(sha_info, data, i);
+        sha_update(sha_info, data, (int)i);
     }
     sha_final(digest, sha_info);
 }
@@ -308,12 +308,12 @@ void sha_stream(unsigned char digest[20], SHA_INFO *sha_info, FILE *fin)
 void sha_print(unsigned char digest[20])
 {
     int i, j;
-
+    
     for (j = 0; j < 5; ++j) {
-	for (i = 0; i < 4; ++i) {
-	    printf("%02x", *digest++);
-	}
-	printf("%c", (j < 4) ? ' ' : '\n');
+        for (i = 0; i < 4; ++i) {
+            printf("%02x", *digest++);
+        }
+        printf("%c", (j < 4) ? ' ' : '\n');
     }
 }
 

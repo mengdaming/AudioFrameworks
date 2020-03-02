@@ -103,7 +103,7 @@ int mad_decoder_finish(struct mad_decoder *decoder)
     close(decoder->async.in);
 
     do
-      pid = waitpid(decoder->async.pid, &status, 0);
+      pid = waitpid((pid_t)decoder->async.pid, &status, 0);
     while (pid == -1 && errno == EINTR);
 
     decoder->mode = -1;
