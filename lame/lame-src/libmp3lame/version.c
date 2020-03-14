@@ -20,15 +20,15 @@
  */
 
 /*!
-  \file   version.c
-  \brief  Version numbering for LAME.
-
-  Contains functions which describe the version of LAME.
-
-  \author A.L. Faber
-  \version \$Id: version.c,v 1.32.2.2 2011/11/18 09:18:28 robert Exp $
-  \ingroup libmp3lame
-*/
+ \file   version.c
+ \brief  Version numbering for LAME.
+ 
+ Contains functions which describe the version of LAME.
+ 
+ \author A.L. Faber
+ \version \$Id: version.c,v 1.32.2.2 2011/11/18 09:18:28 robert Exp $
+ \ingroup libmp3lame
+ */
 
 
 #ifdef HAVE_CONFIG_H
@@ -42,81 +42,79 @@
 #include "version.h"    /* macros of version numbers */
 
 
+const char* get_lame_tag_encoder_short_version(void);
 
 
 
 /*! Get the LAME version string. */
 /*!
-  \param void
-  \return a pointer to a string which describes the version of LAME.
-*/
-const char *
-get_lame_version(void)
+ \param void
+ \return a pointer to a string which describes the version of LAME.
+ */
+const char* get_lame_version(void)
 {                       /* primary to write screen reports */
     /* Here we can also add informations about compile time configurations */
-
+    
 #if   LAME_ALPHA_VERSION
     static /*@observer@ */ const char *const str =
-        STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) " "
-        "(alpha " STR(LAME_PATCH_VERSION) ", " __DATE__ " " __TIME__ ")";
+    STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) " "
+    "(alpha " STR(LAME_PATCH_VERSION) ", " __DATE__ " " __TIME__ ")";
 #elif LAME_BETA_VERSION
     static /*@observer@ */ const char *const str =
-        STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) " "
-        "(beta " STR(LAME_PATCH_VERSION) ", " __DATE__ ")";
+    STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) " "
+    "(beta " STR(LAME_PATCH_VERSION) ", " __DATE__ ")";
 #elif LAME_RELEASE_VERSION && (LAME_PATCH_VERSION > 0)
     static /*@observer@ */ const char *const str =
-        STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) "." STR(LAME_PATCH_VERSION);
+    STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) "." STR(LAME_PATCH_VERSION);
 #else
     static /*@observer@ */ const char *const str =
-        STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION);
+    STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION);
 #endif
-
+    
     return str;
 }
 
 
 /*! Get the short LAME version string. */
 /*!
-  It's mainly for inclusion into the MP3 stream.
-
-  \param void   
-  \return a pointer to the short version of the LAME version string.
-*/
-const char *
-get_lame_short_version(void)
+ It's mainly for inclusion into the MP3 stream.
+ 
+ \param void
+ \return a pointer to the short version of the LAME version string.
+ */
+const char* get_lame_short_version(void)
 {
     /* adding date and time to version string makes it harder for output
-       validation */
-
+     validation */
+    
 #if   LAME_ALPHA_VERSION
     static /*@observer@ */ const char *const str =
-        STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) " (alpha " STR(LAME_PATCH_VERSION) ")";
+    STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) " (alpha " STR(LAME_PATCH_VERSION) ")";
 #elif LAME_BETA_VERSION
     static /*@observer@ */ const char *const str =
-        STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) " (beta " STR(LAME_PATCH_VERSION) ")";
+    STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) " (beta " STR(LAME_PATCH_VERSION) ")";
 #elif LAME_RELEASE_VERSION && (LAME_PATCH_VERSION > 0)
     static /*@observer@ */ const char *const str =
-        STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) "." STR(LAME_PATCH_VERSION);
+    STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) "." STR(LAME_PATCH_VERSION);
 #else
     static /*@observer@ */ const char *const str =
-        STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION);
+    STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION);
 #endif
-
+    
     return str;
 }
 
 /*! Get the _very_ short LAME version string. */
 /*!
-  It's used in the LAME VBR tag only.
-
-  \param void   
-  \return a pointer to the short version of the LAME version string.
-*/
-const char *
-get_lame_very_short_version(void)
+ It's used in the LAME VBR tag only.
+ 
+ \param void
+ \return a pointer to the short version of the LAME version string.
+ */
+const char* get_lame_very_short_version(void)
 {
     /* adding date and time to version string makes it harder for output
-       validation */
+     validation */
 #if   LAME_ALPHA_VERSION
 #define P "a"
 #elif LAME_BETA_VERSION
@@ -128,27 +126,26 @@ get_lame_very_short_version(void)
 #endif
     static /*@observer@ */ const char *const str =
 #if (LAME_PATCH_VERSION > 0)
-      "LAME" STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) P STR(LAME_PATCH_VERSION)
+    "LAME" STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) P STR(LAME_PATCH_VERSION)
 #else
-      "LAME" STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) P
+    "LAME" STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) P
 #endif
-      ;
+    ;
     return str;
 }
 
 /*! Get the _very_ short LAME version string. */
 /*!
-  It's used in the LAME VBR tag only, limited to 9 characters max.
-  Due to some 3rd party HW/SW decoders, it has to start with LAME.
-
-  \param void   
-  \return a pointer to the short version of the LAME version string.
+ It's used in the LAME VBR tag only, limited to 9 characters max.
+ Due to some 3rd party HW/SW decoders, it has to start with LAME.
+ 
+ \param void
+ \return a pointer to the short version of the LAME version string.
  */
-const char*
-get_lame_tag_encoder_short_version(void)
+const char* get_lame_tag_encoder_short_version(void)
 {
     static /*@observer@ */ const char *const str =
-            /* FIXME: new scheme / new version counting / drop versioning here ? */
+    /* FIXME: new scheme / new version counting / drop versioning here ? */
     "LAME" STR(LAME_MAJOR_VERSION) "." STR(LAME_MINOR_VERSION) P
     ;
     return str;
@@ -156,55 +153,53 @@ get_lame_tag_encoder_short_version(void)
 
 /*! Get the version string for GPSYCHO. */
 /*!
-  \param void
-  \return a pointer to a string which describes the version of GPSYCHO.
-*/
+ \param void
+ \return a pointer to a string which describes the version of GPSYCHO.
+ */
 const char *
 get_psy_version(void)
 {
 #if   PSY_ALPHA_VERSION > 0
     static /*@observer@ */ const char *const str =
-        STR(PSY_MAJOR_VERSION) "." STR(PSY_MINOR_VERSION)
-        " (alpha " STR(PSY_ALPHA_VERSION) ", " __DATE__ " " __TIME__ ")";
+    STR(PSY_MAJOR_VERSION) "." STR(PSY_MINOR_VERSION)
+    " (alpha " STR(PSY_ALPHA_VERSION) ", " __DATE__ " " __TIME__ ")";
 #elif PSY_BETA_VERSION > 0
     static /*@observer@ */ const char *const str =
-        STR(PSY_MAJOR_VERSION) "." STR(PSY_MINOR_VERSION)
-        " (beta " STR(PSY_BETA_VERSION) ", " __DATE__ ")";
+    STR(PSY_MAJOR_VERSION) "." STR(PSY_MINOR_VERSION)
+    " (beta " STR(PSY_BETA_VERSION) ", " __DATE__ ")";
 #else
     static /*@observer@ */ const char *const str =
-        STR(PSY_MAJOR_VERSION) "." STR(PSY_MINOR_VERSION);
+    STR(PSY_MAJOR_VERSION) "." STR(PSY_MINOR_VERSION);
 #endif
-
+    
     return str;
 }
 
 
 /*! Get the URL for the LAME website. */
 /*!
-  \param void
-  \return a pointer to a string which is a URL for the LAME website.
-*/
-const char *
-get_lame_url(void)
+ \param void
+ \return a pointer to a string which is a URL for the LAME website.
+ */
+const char* get_lame_url(void)
 {
     static /*@observer@ */ const char *const str = LAME_URL;
-
+    
     return str;
 }
 
 
 /*! Get the numerical representation of the version. */
 /*!
-  Writes the numerical representation of the version of LAME and
-  GPSYCHO into lvp.
-
-  \param lvp    
-*/
-void
-get_lame_version_numerical(lame_version_t * lvp)
+ Writes the numerical representation of the version of LAME and
+ GPSYCHO into lvp.
+ 
+ \param lvp
+ */
+void get_lame_version_numerical(lame_version_t * lvp)
 {
     static /*@observer@ */ const char *const features = ""; /* obsolete */
-
+    
     /* generic version */
     lvp->major = LAME_MAJOR_VERSION;
     lvp->minor = LAME_MINOR_VERSION;
@@ -218,13 +213,13 @@ get_lame_version_numerical(lame_version_t * lvp)
     lvp->alpha = 0;
     lvp->beta = 0;
 #endif
-
+    
     /* psy version */
     lvp->psy_major = PSY_MAJOR_VERSION;
     lvp->psy_minor = PSY_MINOR_VERSION;
     lvp->psy_alpha = PSY_ALPHA_VERSION;
     lvp->psy_beta = PSY_BETA_VERSION;
-
+    
     /* compile time features */
     /*@-mustfree@ */
     lvp->features = features;
@@ -232,22 +227,21 @@ get_lame_version_numerical(lame_version_t * lvp)
 }
 
 
-const char *
-get_lame_os_bitness(void)
+const char* get_lame_os_bitness(void)
 {
     static /*@observer@ */ const char *const strXX = "";
     static /*@observer@ */ const char *const str32 = "32bits";
     static /*@observer@ */ const char *const str64 = "64bits";
-
+    
     switch (sizeof(void *)) {
-    case 4:
-        return str32;
-
-    case 8:
-        return str64;
-
-    default:
-        return strXX;
+        case 4:
+            return str32;
+            
+        case 8:
+            return str64;
+            
+        default:
+            return strXX;
     }
 }
 

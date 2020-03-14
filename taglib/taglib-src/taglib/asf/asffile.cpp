@@ -630,7 +630,7 @@ void ASF::File::read()
       setValid(false);
       break;
     }
-    long size = (long)readQWORD(this, &ok);
+    long size = readQWORD(this, &ok);
     if(!ok) {
       setValid(false);
       break;
@@ -662,7 +662,7 @@ void ASF::File::read()
       }
       obj = new FilePrivate::UnknownObject(guid);
     }
-    obj->parse(this, size);
+    obj->parse(this, (unsigned int)size);
     d->objects.append(obj);
   }
 }

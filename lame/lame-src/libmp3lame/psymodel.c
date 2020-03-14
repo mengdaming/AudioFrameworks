@@ -1071,13 +1071,13 @@ vbrpsy_compute_masking_s(lame_internal_flags * gfc, const FLOAT(*fftenergy_s)[HB
         dd = mask_idx_s[kk];
         dd_n = 1;
         ecb = gds->s3[j] * eb[kk] * tab[mask_idx_s[kk]];
-        ++j, ++kk;
+        ++j; ++kk;
         while (kk <= last) {
             dd += mask_idx_s[kk];
             dd_n += 1;
             x = gds->s3[j] * eb[kk] * tab[mask_idx_s[kk]];
             ecb = vbrpsy_mask_add(ecb, x, kk - b, delta);
-            ++j, ++kk;
+            ++j; ++kk;
         }
         dd = (1 + 2 * dd) / (2 * dd_n);
         avg_mask = tab[dd] * 0.5f;

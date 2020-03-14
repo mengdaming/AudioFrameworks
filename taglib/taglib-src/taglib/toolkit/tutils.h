@@ -189,7 +189,7 @@ namespace TagLib
       va_start(args, format);
 
       char buf[BufferSize];
-      int length;
+      size_t length;
 
 #if defined(HAVE_VSNPRINTF)
 

@@ -240,7 +240,7 @@ void MPC::AudioProperties::readSV8(File *file, long long streamLength)
       d->version = data[pos];
       pos += 1;
 
-      d->sampleFrames = readSize(data, pos);
+      d->sampleFrames = (unsigned int)readSize(data, pos);
       if(pos > dataSize - 3) {
         debug("MPC::AudioProperties::readSV8() - \"SH\" packet is corrupt.");
         break;
@@ -258,7 +258,7 @@ void MPC::AudioProperties::readSV8(File *file, long long streamLength)
       d->sampleRate = sftable[(flags >> 13) & 0x07];
       d->channels   = ((flags >> 4) & 0x0F) + 1;
 
-      const unsigned int frameCount = d->sampleFrames - begSilence;
+      const unsigned int frameCount = (unsigned int)(d->sampleFrames - begSilence);
       if(frameCount > 0 && d->sampleRate > 0) {
         const double length = frameCount * 1000.0 / d->sampleRate;
         d->length  = static_cast<int>(length + 0.5);
