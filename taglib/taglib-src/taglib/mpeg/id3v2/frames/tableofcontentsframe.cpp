@@ -322,8 +322,8 @@ ByteVector TableOfContentsFrame::renderFields() const
     it++;
   }
   FrameList l = d->embeddedFrameList;
-  for(FrameList::ConstIterator it = l.begin(); it != l.end(); ++it)
-    data.append((*it)->render());
+  for(FrameList::ConstIterator itf = l.begin(); itf != l.end(); ++itf)
+    data.append((*itf)->render());
 
   return data;
 }

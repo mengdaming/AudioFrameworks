@@ -58,7 +58,7 @@ Cd *cd_init ()
 	return cd;
 }
 
-Track *track_init ()
+static Track *track_init ()
 {
 	Track *track = NULL;
 	track = malloc(sizeof(Track));
